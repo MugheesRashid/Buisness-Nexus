@@ -41,11 +41,11 @@ export const LoginPage = () => {
   // For demo purposes, pre-filled credentials
   const fillDemoCredentials = (userRole) => {
     if (userRole === 'entrepreneur') {
-      setEmail('sarah@techwave.io');
-      setPassword('password123');
+      setEmail('me@m.com');
+      setPassword('123123');
     } else {
-      setEmail('michael@vcinnovate.com');
-      setPassword('password123');
+      setEmail('mi@m.com');
+      setPassword('123123');
     }
     setRole(userRole);
   };

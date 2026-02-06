@@ -67,7 +67,7 @@ export const EntrepreneurProfile = () => {
       console.log('Saving updates:', updates);
       console.log('User ID:', user?.id);
       
-      const response = await fetch(`${import.meta.env.API_BASE_URL}/profile/update-entrepreneur-profile`, {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/profile/update-entrepreneur-profile`, {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json', 

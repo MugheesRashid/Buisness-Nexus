@@ -37,7 +37,7 @@ export const ChatPage = () => {
   useEffect(() => {
     // Connect to socket
     const token = localStorage.getItem("authToken");
-    const newSocket = io("http://localhost:5000", {
+    const newSocket = io("https://buisness-nexus.up.railway.app", {
       auth: { token },
     });
     setSocket(newSocket);

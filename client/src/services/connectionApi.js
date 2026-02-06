@@ -9,7 +9,7 @@ class ConnectionApi {
   }
 
   initSocket() {
-    this.socket = io("http://localhost:5000", {
+    this.socket = io("https://buisness-nexus.up.railway.app", {
       auth: {
         token: localStorage.getItem("authToken"),
       },

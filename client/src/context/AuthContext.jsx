@@ -2,7 +2,7 @@ import React, { createContext, useState, useContext, useEffect, useRef } from 'r
 import toast from 'react-hot-toast';
 import { io } from 'socket.io-client';
 
-const API_BASE_URL = "http://localhost:5000/api";
+const API_BASE_URL = "https://buisness-nexus.up.railway.app/api";
 
 const apiRequest = async (endpoint, options = {}) => {
   const url = `${API_BASE_URL}${endpoint}`;
@@ -54,7 +54,7 @@ export const AuthProvider = ({ children }) => {
       setUser(userData);
 
       // Connect to socket
-      socketRef.current = io('http://localhost:5000', {
+      socketRef.current = io('https://buisness-nexus.up.railway.app', {
         auth: { token }
       });
 
@@ -98,7 +98,7 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem('authToken', token);
 
       // Connect to socket
-      socketRef.current = io('http://localhost:5000', {
+      socketRef.current = io('https://buisness-nexus.up.railway.app', {
         auth: { token }
       });
 

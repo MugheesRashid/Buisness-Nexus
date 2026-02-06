@@ -53,7 +53,7 @@ export const InvestorProfile = () => {
     const fetchConnectedStartupsCount = async () => {
       if (!id) return;
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/connections/connected-startups/${id}`, {
+        const response = await fetch(`https://buisness-nexus.up.railway.app/api/connections/connected-startups/${id}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('authToken')}`
           }
@@ -95,7 +95,7 @@ export const InvestorProfile = () => {
         updates = { ...formData };
       }
 
-      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/profile/update-investor-profile`, {
+      const response = await fetch(`https://buisness-nexus.up.railway.app/api/profile/update-investor-profile`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
